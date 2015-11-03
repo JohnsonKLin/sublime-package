@@ -1,0 +1,15 @@
+<snippet>
+  <!-- Example: Hello, ${1:this} is a ${2:snippet}. -->
+  <content><![CDATA[
+${2:driverset_one_day_group} = group ${1:driverset_one_day} by account_number parallel 100;
+${1:driverset_one_day} = foreach ${2:driverset_one_day_group}{
+	${1:driverset_one_day} = limit ${1:driverset_one_day} 1;
+	generate flatten(${1:driverset_one_day});
+};
+]]></content>
+  <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+  <tabTrigger>pigdedup</tabTrigger>
+  <description>pigdedupe</description>
+  <!-- Optional: Set a scope to limit where the snippet will trigger -->
+  <scope></scope>
+</snippet>

@@ -1,0 +1,11 @@
+<snippet>
+  <!-- Example: Hello, ${1:this} is a ${2:snippet}. -->
+  <content><![CDATA[
+STORE ${1:variables} INTO '${2:edge_automation}' USING PigStorage('|', '-schema');
+]]></content>
+  <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+  <tabTrigger>pigstore</tabTrigger>
+  <description>pigstore</description>
+  <!-- Optional: Set a scope to limit where the snippet will trigger -->
+  <!-- <scope>*.pig</scope> -->
+</snippet>

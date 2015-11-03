@@ -1,0 +1,17 @@
+<snippet>
+	<content><![CDATA[
+SET job.name '${1:job}';
+SET hdp.version '2.2.4.2-2'
+SET mapred.child.java.opts '-XX:+UseCompressedOops -XX:+UseConcMarkSweepGC -XX:ParallelGCThreads=2 -Xmx4096m';
+SET mapred.compress.map.output true;
+SET mapred.map.output.compression.codec org.apache.hadoop.io.compress.SnappyCodec;
+SET mapred.tasktracker.expiry.interval 1800000;
+SET mapred.task.timeout 1800000;
+REGISTER /x/home/zhaoslin/PigLib/*.jar;
+IMPORT '/x/home/zhaoslin/EdgeBuilder/macros.pig';
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>pigsetting</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<!-- <scope>source.python</scope> -->
+</snippet>

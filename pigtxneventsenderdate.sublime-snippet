@@ -1,0 +1,12 @@
+<snippet>
+  <!-- Example: Hello, ${1:this} is a ${2:snippet}. -->
+  <content><![CDATA[
+${1:txn_event_sender} = txn_event_sender('/sys/pp_dt/SD/leopard/idi_txn_event_sender/sequence/incremental/{${2:date}}/00');
+
+]]></content>
+  <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+  <tabTrigger>pigtxneventsenderdate</tabTrigger>
+  <description>pigtxneventsenderdate</description>
+  <!-- Optional: Set a scope to limit where the snippet will trigger -->
+  <!-- <scope></scope> -->
+</snippet>
